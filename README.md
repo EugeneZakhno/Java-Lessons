@@ -5,4 +5,4 @@ Lesson 1: Урок по Java 1: Установка Java Development Kit(JDK), к
 ***
 Lesson 2: Урок по Java 2: Установка и запуск первой программы в Eclipse
 ***
-Lesson 3:
+Lesson 3: 
