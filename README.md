@@ -1,3 +1,4 @@
+![screenshot of sample](https://i.pinimg.com/originals/61/63/52/616352a9bb80c36a61ffb185a213d0a3.jpg)
 # Java-Lessons
 Уроки Java с youtube канала https://www.youtube.com/user/husivm/videos
 ***
