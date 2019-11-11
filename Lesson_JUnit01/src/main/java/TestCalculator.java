@@ -1,5 +1,5 @@
 public class TestCalculator {
-    public static void testCalc() {
+    public void testCalc() throws Exception{
         Calculator calculator = new Calculator();
         int result =  calculator.add(3,4);
         if(result != 7) {

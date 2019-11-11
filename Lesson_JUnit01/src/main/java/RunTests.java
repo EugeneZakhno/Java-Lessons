@@ -1,6 +1,11 @@
 public class RunTests {
     public static void main(String[] args) {
-        TestCalculator testCalculator = new TestCalculator();
-
+        try {
+            TestCalculator testCalculator = new TestCalculator();
+            testCalculator.testCalc();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
