@@ -27,8 +27,9 @@ class Person /*implements Comparable<Person>*/ {
                 '}';
     }
 }
+
 // Comparator we use when wa have no access to class Person:
-class  ComparePerson implements Comparator <Person>{
+class ComparePerson implements Comparator<Person> {
     @Override
     public int compare(Person o1, Person o2) {
         return o1.getAge() - o2.getAge();
@@ -46,8 +47,8 @@ public class Main {
         set.add(new Person(61));
         set.add(new Person(32));
 
-        for (Object o : set){
-           System.out.println(o);
+        for (Object o : set) {
+            System.out.println(o);
 
        /*   Начиная с Java 8, мы можем сделать так
             Set<Person> set = new TreeSet<>(Comparator.comparingInt(Person::getAge))
