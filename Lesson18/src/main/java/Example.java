@@ -1,7 +1,6 @@
 public class Example {
 
-    void method(){
-
+    public abstract static strictfp synchronized int final native metod() {
+        // passifn method(){};
     }
-
 }
