@@ -42,19 +42,15 @@ class Book {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return obj != null && this.title.equals(((Book) obj).title);
-    }
-
-
-    /*
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
         Book book = (Book) o;
-        return title.equals(book.title);
+        return Objects.equals(title, book.title);
     }
-*/
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(title);
+    }
 }
