@@ -8,6 +8,7 @@ public class Main {
         List<String> list = new ArrayList<String>();
         list.add("one");
         list.add("two");
+        list.add("three");
 
         System.out.println("Длинный код для выводы содержимого ArrayList: ");
         Iterator<String> iterator = list.iterator();
