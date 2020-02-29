@@ -9,6 +9,10 @@ public class Starter {
             list.add(String.format("%2d", i));
         }
 
+        for (String s: list) {
+            System.out.println(s);
+        }
+
 
     }
 
