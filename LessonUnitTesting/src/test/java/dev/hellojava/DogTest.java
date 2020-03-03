@@ -1,9 +1,18 @@
 package dev.hellojava;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DogTest {
+    Dog dog;
+    @BeforeEach
+    void prepareData(){
+       dog = new Dog("Albert", 2);
+    }
+
+
+
 
     @Test
     void getName() {
