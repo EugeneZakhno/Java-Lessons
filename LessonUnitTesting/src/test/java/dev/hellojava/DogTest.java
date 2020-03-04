@@ -11,9 +11,6 @@ class DogTest {
        dog = new Dog("Albert", 2);
     }
 
-
-
-
     @Test
     void getName() {
        Dog dog = new Dog("Albert", 2);
@@ -35,7 +32,7 @@ class DogTest {
     @Test
     void getAge() {
         Dog dog = new Dog("Albert", 2);
-        dog.getAge(2);
+        dog.getAge(4);
         assertEquals(2,dog.getAge(2));
     }
 
