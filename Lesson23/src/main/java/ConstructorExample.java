@@ -15,7 +15,7 @@ public class ConstructorExample extends MyParent {
     public ConstructorExample() {
         super(5);
         //super();//Даже неявно но добавляется в конструктор
-        System.out.println("Constructor example");
+
     }
 
     public static void main(String[] args) {
