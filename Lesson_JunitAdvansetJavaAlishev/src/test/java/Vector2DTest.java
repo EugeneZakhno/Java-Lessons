@@ -4,6 +4,6 @@ class Vector2DTest {
 
     @org.junit.jupiter.api.Test
     public void newVectorShouldHaveZiroLength() {
-
+        Vector2D vector2D = new Vector2D();
     }
 }
