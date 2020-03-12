@@ -15,7 +15,7 @@ public class Runner {
         System.out.println("  всех пользователей MALE: " + User.getHowManyUsers(Sex.MALE));
         System.out.println("всех пользователей FEMALE: " + User.getHowManyUsers(Sex.FEMALE));
         System.out.println("================================================");
-        System.out.println("       общий возраст всех пользователей: " + User.getAllAgeUsers());
+        System.out.println(" общий возраст всех пользователей: " + User.getAllAgeUsers());
         System.out.println("  общий возраст всех пользователей MALE: " + User.getAllAgeUsers(Sex.MALE));
         System.out.println("общий возраст всех пользователей FEMALE: " + User.getAllAgeUsers(Sex.FEMALE));
         System.out.println("================================================");
