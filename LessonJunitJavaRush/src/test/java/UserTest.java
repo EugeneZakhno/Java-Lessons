@@ -1,4 +1,6 @@
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 //https://javarush.ru/groups/posts/605-junit
@@ -6,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getAllUsers() {
         //создаем тестовые данные
         User user = new User("Евгений", 35, Sex.MALE);
@@ -28,31 +30,38 @@ class UserTest {
        assertEquals(expected, actual);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
+    public void getAllUsers_NO_NULL() {
+        //добавим проверку на null
+        List<User> expected = User.getAllUsers();
+       assertNotNull(expected);
+    }
+    @Test
     void testGetAllUsers() {
     }
 
-    @org.junit.jupiter.api.Test
+
+    @Test
     void getHowManyUsers() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testGetHowManyUsers() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getAllAgeUsers() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testGetAllAgeUsers() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getAverageAgeOfAllUsers() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testGetAverageAgeOfAllUsers() {
     }
 }
