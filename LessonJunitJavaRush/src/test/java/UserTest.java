@@ -1,15 +1,16 @@
 
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-//https://javarush.ru/groups/posts/605-junit
-import static org.junit.jupiter.api.Assertions.*;
 
-class UserTest {
+import static org.junit.Assert.*;
+
+public class UserTest {
 
     @Test
-    void getAllUsers() {
+    public void getAllUsers() {
         //создаем тестовые данные
         User user = new User("Евгений", 35, Sex.MALE);
         User user1 = new User("Марина", 34, Sex.FEMALE);
@@ -27,41 +28,134 @@ class UserTest {
 
         //запускаем тест, в случае если список expected и actual не будут равны
         //тест будет провален, о результатах теста читаем в консоли
-       assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void getAllUsers_NO_NULL() {
         //добавим проверку на null
         List<User> expected = User.getAllUsers();
-       assertNotNull(expected);
-    }
-    @Test
-    void testGetAllUsers() {
-    }
-
-
-    @Test
-    void getHowManyUsers() {
+        Assert.assertNotNull(expected);
     }
 
     @Test
-    void testGetHowManyUsers() {
+    public void getAllUsers_MALE() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        List<User> expected = User.getAllUsers(Sex.MALE);
+
+        List<User> actual = new ArrayList<>();
+        actual.add(user);
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    void getAllAgeUsers() {
+    public void getAllUsers_MALE_NO_NULL() {
+        //добавим проверку на null
+        List<User> expected = User.getAllUsers(Sex.MALE);
+        Assert.assertNotNull(expected);
     }
 
     @Test
-    void testGetAllAgeUsers() {
+    public void getAllUsers_FEMALE() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+
+
+        List<User> actual = new ArrayList<>();
+        actual.add(user1);
+        actual.add(user2);
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    void getAverageAgeOfAllUsers() {
+    public void getAllUsers_FEMALE_NO_NULL() {
+        //добавим проверку на null
+        List<User> expected = User.getAllUsers(Sex.FEMALE);
+        Assert.assertNotNull(expected);
     }
 
     @Test
-    void testGetAverageAgeOfAllUsers() {
+    public void getHowManyUsers() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        int expected = User.getHowManyUsers();
+
+        int actual = 3;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getHowManyUsers_MALE() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        int expected = User.getHowManyUsers(Sex.MALE);
+
+        int actual = 1;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getHowManyUsers_FEMALE() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        int expected = User.getHowManyUsers(Sex.FEMALE);
+
+        int actual = 2;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getAllAgeUsers() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        int expected = User.getAllAgeUsers();
+
+        int actual = 35 + 34 + 7;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getAllAgeUsers_MALE() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        int expected = User.getAllAgeUsers(Sex.MALE);
+
+        int actual = 35;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getAllAgeUsers_FEMALE() {
+        User user = new User("Евгений", 35, Sex.MALE);
+        User user1 = new User("Марина", 34, Sex.FEMALE);
+        User user2 = new User("Алина", 7, Sex.FEMALE);
+
+        int expected = User.getAllAgeUsers(Sex.FEMALE);
+
+        int actual = 34 + 7;
+
+        Assert.assertEquals(expected, actual);
     }
 }
