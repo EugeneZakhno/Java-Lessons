@@ -11,6 +11,7 @@ public class UserTest {
 
     @Test
     public void getAllUsers() {
+
         //создаем тестовые данные
         User user = new User("Евгений", 35, Sex.MALE);
         User user1 = new User("Марина", 34, Sex.FEMALE);
@@ -22,9 +23,9 @@ public class UserTest {
         //создаем список actual в него помещаем данные для сравнения
         //то что мы предпологиаем метод должен вернуть
         List<User> actual = new ArrayList<>();
-        actual.add(user);
-        actual.add(user1);
-        actual.add(user2);
+        actual.add(new User("User1", 1, Sex.MALE));
+        actual.add(new User("User2", 2, Sex.FEMALE));
+        actual.add(new User("User3", 3, Sex.MALE));
 
         //запускаем тест, в случае если список expected и actual не будут равны
         //тест будет провален, о результатах теста читаем в консоли
