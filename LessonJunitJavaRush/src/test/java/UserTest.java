@@ -17,13 +17,12 @@ public class UserTest {
     public void setUp() throws Exception {
         user = new User("Евгений", 35, Sex.MALE);
         user1 = new User("Марина", 34, Sex.FEMALE);
-        user2 = new User("Алина", 7, Sex.FEMALE);
+        user2 = new User("Саша", 7, Sex.FEMALE);
     }
 
     @Test
     public void getAllUsers() {
         List<User> expected = User.getAllUsers();
-
         List<User> actual = new ArrayList<>();
         actual.add(user);
         actual.add(user1);
