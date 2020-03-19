@@ -1,3 +1,6 @@
+
+
+
 public class Vector2D {
 
     private double x;
@@ -18,6 +21,7 @@ public class Vector2D {
     public void setY(double y) {
         this.y = y;
     }
+
     public double length(){
         return Math.sqrt(x*x+y*y);
     }
