@@ -7,6 +7,5 @@ public class NetworkUtils {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return;
     }
 }
