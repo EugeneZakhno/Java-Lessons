@@ -6,10 +6,4 @@ public class MyMath {
         return number1/number2;
     }
 
-
-
-
-
-
-
 }

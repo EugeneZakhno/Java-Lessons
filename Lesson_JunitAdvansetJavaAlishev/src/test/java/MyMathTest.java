@@ -1,9 +1,9 @@
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+
 
 public class MyMathTest {
 
-    @Test
+    @Test(expected = ArithmeticException.class)
    public void zeroDenominatorShouldThrowException() {
         MyMath.devide(1,0);
     }
