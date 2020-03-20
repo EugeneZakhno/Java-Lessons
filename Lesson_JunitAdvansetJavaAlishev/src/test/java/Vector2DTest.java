@@ -3,7 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Vector2DTest {
-    private final double EPS = 1e-8;
+    private final double EPS = 1e-9;
     private Vector2D v1;
 
     @Before
